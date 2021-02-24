@@ -20,7 +20,7 @@ var circleRadius = 10;
 // this gets the whole thing going
 for (var i = 0; i < maxCircles; i++){
     var newId = getId(i);
-    var newCircle = makeCircle(i);
+    var newCircle = makeCircle(newId);
     circles.push(newCircle);
 
     addNewCircleElement(newCircle, newId);
@@ -42,6 +42,7 @@ function makeCircle(id){
     var maxY = boardHeight - circleRadius*2;
     
     circle.id = "#" + id;
+
     circle.x = Math.random() * maXX + circleRadius;
     circle.y = Math.random() * maxY + circleRadius;
     circle.speedX = decideSpeed();
@@ -77,7 +78,7 @@ function addNewCircleElement(circle, id){
 // this should move all of the circles
 function update(){
     for (var i = 0; i < maxCircles; i++){
-        var circle = circle + i;
+        var circle = circles[i];
         moveCircle(circle);
         bounceCircle(circle);
         updateCircleOnScreen(circle);
@@ -92,7 +93,7 @@ function update(){
 function moveCircle(circle){
     circle.x += circle.speedX;
     circle.y += circle.speedY;
-}
+};
 
 // this bounces circles if they hit a wall
 function bounceCircle(circle){
@@ -110,7 +111,7 @@ function bounceCircle(circle){
     }
     else if (circle.y > boardHeight){
         circle.y -= circle.speedY;
-        circle.speedX *= -1;
+        circle.speedY *= -1;
     }
 }
 
