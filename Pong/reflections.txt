@@ -1,0 +1,46 @@
+GAMEPLAY
+To play pong there are 2 players, or a player and an ai, which they can move up and down. There is a 
+ball/orb/sprite that moves back and forth between the two players "hit boxes" or rectangles. When it hits either
+a top or bottom wall or a player it will bounce off, if it hits a horizontal wall/a player's wall the ball will 
+dissapear and the other player is the winner (ball did not hit their wall).
+
+The game begins when a player hits the 'enter' key, the ball starts in the middle and will move to the left until 
+it hits a player or a player's wall
+
+The game ends when the ball hits a player's wall 11 times overall, the left player and right player has a
+different point counter (left player earns point when ball goes into right wall, needs to hit 11 points to win)
+
+if ball hits right wall it appears in the middle again and begins to move to the left, as well as adding a point
+to left player's counter (and vice versa)
+if the ball hits a top wall or player's hit box it will bounce off 
+if either player hits 11 points the game ends
+
+VISUAL COMPONENTS
+background/board - static
+ball/sprite - animated
+player's paddles/hitboxes/characters/rectangles - animated
+middle line (for ball to show up on) - static
+boxes/point counters for each player (left and right player)
+
+position1X (x position of ball)
+position1Y (y position of ball)
+speed1 (speed of ball)
+position2Y (y position of left player)
+speed2 (speed of left player)
+position3Y (y position of right player)
+speed3 (speed of right player)
+points2 (points of left player)
+points3 (points of right player)
+
+EVENTS AND LOGIC
+game starting -- press enter,, ball will begin moving left (begins in x middle and y middle)
+round ending -- ball hits left or right wall
+points added -- point added to left player when ball hits right wall,, vice versa
+game ending -- either player has 11 points in their counter
+left player moving -- W key to move up,, S key to move down
+right player moving -- Up arrow to move up,, down arrow to move down
+
+EASTER EGGS/EXTRA??
+when ball clicked speed moves up by 1 (ball speed 3, ball clicked, ball speed 4)
+when G key pressed background changes
+when 1 key pressed second ball spawns
