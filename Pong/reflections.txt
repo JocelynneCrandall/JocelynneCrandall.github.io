@@ -1,4 +1,4 @@
-GAMEPLAY
+GAMEPLAY     --------------- https://jsbin.com/hapiyoxipi/edit?js,console
 To play pong there are 2 players, or a player and an ai, which they can move up and down. There is a 
 ball/orb/sprite that moves back and forth between the two players "hit boxes" or rectangles. When it hits either
 a top or bottom wall or a player it will bounce off, if it hits a horizontal wall/a player's wall the ball will 

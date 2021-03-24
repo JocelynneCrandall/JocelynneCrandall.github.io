@@ -11,13 +11,20 @@ body {
   position: relative;
 }
 
-#gameItem {
+#pointCounter1 { /* left player point counter */
   background-color: teal;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   position: absolute;
  /*  left: 100px;   Uncomment if you want to set a "starting" position */
  /* top: 100px;    Uncomment if you want to set a "starting" position */
+}
+#pointCounter2 { /* right player point counter*/
+    background-color: teal;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 1100px;
 }
 #player1 {    /*    player1/left player       */ 
     background-color: whitesmoke;
@@ -43,13 +50,13 @@ body {
     height:30px;
     border-radius: 30px;
     position: absolute;
-    left: 565px;
+    left: 587.5px;
     top: 255px;
 }
-#midpoint {
+#midpoint { /* middle of map */
     background-color: teal;
     width: 5px;
     height: 550px;
     position: absolute;
-    left: 580px;
+    left: 600px;
 }
