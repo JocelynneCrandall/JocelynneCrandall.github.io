@@ -113,24 +113,9 @@ $("#player1").css("top", positionY1);
 $("#player2").css("top", positionY2);
  }
 
- function doCollide(player1, player2, ball, board) {  /// stopping/changing movement of items when colliding with eachother/edges
-   player1.bottomY = player1.x + player1.height;
-   player1.topY = player1.x;
-
-   player2.bottomY = player2.x + player2.height;
-   player2.topY = player2.x;
-
-   board.bottomY = board.x + board.height;
-   board.topY = board.x;
-
-   if (player1.bottomY < board.bottomY && player1.topY > board.topY && player2.bottomY < board.bottomY && player2.topY > board.topY) {
-       return true;
-   }
-   else {
-       return false;
-   }
+ function doCollide(player1, board) {
+   
  }
-  
   function endGame() {
     // stop the interval timer
     clearInterval(interval);
