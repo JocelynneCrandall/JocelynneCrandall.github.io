@@ -19,13 +19,14 @@ applyFilter();
 // TODO: Create the applyFilter function here
 function applyFilter() {
    for(var w = 0; w < image.length; w++) {
-     for(var k = 0; k < image.length; k++) {
-rbgString - image[w][k]; ///// needs fixed
-       var rbgString = image[0];  // needs fixed
-var rbgNumbers = rgbStringToArray(rbgString);
-rbgNumbers[RED] - 255;
-rbgString = rgbArrayToString(rbgString);
-image[w][k] - rbgString;
+     for(var k = 0; k < image[w].length; k++) { 
+
+var rbgString = image[w][k];  
+var rbgNumbers = {};
+rbgNumbers = rgbStringToArray(rbgString);
+rbgNumbers[0] = 255; 
+rbgString = rgbArrayToString(rbgString); 
+image[w][k] = image[w][k] - rbgString; 
  }
  }
  }
