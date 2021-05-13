@@ -4,7 +4,7 @@ $(document).ready(function(){
     const $display = $('#display');
     // TODO: Call your apply function(s) here
 
-applyFilter(reddify);
+applyFilter(decreaseBlue); // uses filters; changes image based on func called
 
     render($display, image);
 });
@@ -30,10 +30,19 @@ image[w][k] = rbgString;
 // TODO: Create the applyFilterNoBackground function
 function applyFilterNoBackground() {
 
-}
+} 
 
 // TODO: Create filter functions
- function reddify(rbgNumbers) {  /// increases value of red in all pictures, making picture only warm colors
+ function noChange(rbgNumbers) { // gives original image
+    //n/a
+ }
+ function reddify(rbgNumbers) {  // increases value of red in all pictures, making picture only warm colors
      rbgNumbers[RED] = 255;
+ }
+ function decreaseBlue(rbgNumbers) { // decreases amount of blue in image
+     rbgNumbers[BLUE] = Math.max(0);
+ }
+ function increaseGreenByBlue () { // increases amount of green in image by adding blue amount to green amount
+    
  }
 // CHALLENGE code goes below here
