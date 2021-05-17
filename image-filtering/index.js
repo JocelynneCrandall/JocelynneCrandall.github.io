@@ -32,7 +32,7 @@ function applyFilterNoBackground(filterFunction) { // applies the filters to the
       for(var g = 0; g < image[u].length; g++) { 
         var rbgString = image[u][g];  
         var background = image[0][0];
-    if (rbgString = background) {} 
+    if (rbgString === background) {} 
     else {
         var rbgNumbers = rgbStringToArray(rbgString); 
           filterFunction(rbgNumbers);
