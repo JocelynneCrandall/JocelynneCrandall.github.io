@@ -31,12 +31,14 @@ function applyFilterNoBackground(filterFunction) { // applies the filters to the
      for(var u = 0; u < image.length; u++) {
       for(var g = 0; g < image[u].length; g++) { 
         var rbgString = image[u][g];  
-        var background = image[0][0]
+        var background = image[0][0];
+    if (rbgString = background) {} 
+    else {
         var rbgNumbers = rgbStringToArray(rbgString); 
           filterFunction(rbgNumbers);
           rbgString = rgbArrayToString(rbgNumbers); 
           image[u][g] = rbgString; 
-         
+    }
  }
  }
  }
@@ -49,13 +51,12 @@ function applyFilterNoBackground(filterFunction) { // applies the filters to the
      rbgNumbers[RED] = 255;
  }
  function decreaseBlue(rbgNumbers) { // decreases amount of blue in image
-     rbgNumbers[BLUE] = Math.min(rbgNumbers[BLUE] - 30, 0)
+     rbgNumbers[BLUE] = Math.max(rbgNumbers[BLUE] - 30, 0)
  }
  function increaseGreenByBlue(rbgNumbers) { // increases amount of green in image by adding blue amount to green amount
-    rbgNumbers[GREEN] = Math.max(255);
-    rbgNumbers[GREEN] = rbgNumbers[GREEN] + rbgNumbers[BLUE];
-
-// rbgNumbers[GREEN] = Math.max(rbgNumbers[GREEN] + rbgNumbers[BLUE], 255);
+    //rbgNumbers[GREEN] = Math.max(255);
+    //rbgNumbers[GREEN] = rbgNumbers[GREEN] + rbgNumbers[BLUE];
+rbgNumbers[GREEN] = Math.min(rbgNumbers[GREEN] + rbgNumbers[BLUE], 255);
  } 
 
 
