@@ -33,7 +33,7 @@ function render(element, image){
             var color = image[r][c];
      
             // TODO: set an id based on the row and column:
-            // $element.attr("id", "r#c#")
+            //$element.attr("id", "r#c#")
             
             $("<div>").appendTo(element)
                     .addClass("square")

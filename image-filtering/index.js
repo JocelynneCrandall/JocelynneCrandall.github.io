@@ -28,13 +28,17 @@ applyFilterNoBackground(decreaseBlue); // uses filters; changes image based on f
 
 // TODO: Create the applyFilterNoBackground function
 function applyFilterNoBackground(filterFunction) { // applies the filters to the image, but does not affect the background
+for(var i = 0; i < image.length; i++)
+    if (image[i] = image["rgb(150, 150, 150)"]) {}
+else {
      for(var u = 0; u < image.length; u++) {
       for(var g = 0; g < image[u].length; g++) { 
         var rbgString = image[u][g];  
         var rbgNumbers = rgbStringToArray(rbgString); 
-        filterFunction(rbgNumbers);
-        rbgString = rgbArrayToString(rbgNumbers); 
-        image[u][g] = rbgString; 
+          filterFunction(rbgNumbers);
+          rbgString = rgbArrayToString(rbgNumbers); 
+          image[u][g] = rbgString; 
+      }
  }
  }
  }
@@ -55,4 +59,6 @@ function applyFilterNoBackground(filterFunction) { // applies the filters to the
 
 // rbgNumbers[GREEN] = Math.max(rbgNumbers[GREEN] + rbgNumbers[BLUE], 255);
  } 
+
+
 // CHALLENGE code goes below here 
